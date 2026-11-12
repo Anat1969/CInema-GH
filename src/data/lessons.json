@@ -1,0 +1,174 @@
+[
+ {
+  "id": "director",
+  "title": "הבמאי בוחר",
+  "principle": "כל פריים הוא הצהרה — מה נכנס, מה נשאר בחוץ, ולמה זה משנה",
+  "anchor": "אולם הקרנה עם שולחן עריכה — מתח בין שקט הסרט הכחול ובין החלטה שמחכה",
+  "rules": [
+   "זהה את גבול הפריים — מה הבמאי החליט שלא יראה",
+   "שאל: המצלמה עוקבת אחרי הדמות — או הדמות עוקבת אחרי המצלמה?",
+   "מצא את הרגע השקט — הסצנה שהבמאי בחר לא להסביר"
+  ],
+  "images": [
+   {
+    "kind": "theme",
+    "title": "תמונת נושא",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, standing small in a large empty screening room, facing a blank white projection screen, her back three-quarters to camera, slight tilt of the head. Pale limestone floor, oak paneling on side walls, polished concrete ceiling. Muted palette of stone, oak and soft gold. Early morning Mediterranean natural light filtering through a narrow horizontal window on the left wall, casting one long bar of light across the floor. Wide shot, the woman occupies the lower-left third, the screen fills the right two-thirds. Sense of quiet before decision.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/director/0.jpg"
+   },
+   {
+    "kind": "principle",
+    "title": "תמונת עיקרון",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated at a wide oak editing desk, both hands resting on the desk surface, leaning slightly forward. On the desk in front of her: a single monitor showing a split image — the left half a full scene, the right half the same scene cropped tightly, cutting out the periphery. Her eyes move between the two. Pale limestone wall behind her, polished concrete floor. Muted palette of stone, oak and soft gold. Mediterranean natural light from above-left, mid-morning angle, creating a soft shadow of her hands on the desk surface. Medium shot, eye level. Tension between fullness and selection.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/director/1.jpg"
+   },
+   {
+    "kind": "rule1",
+    "title": "כלל 1 — גבול הפריים",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, standing beside a large monitor mounted on a pale limestone wall, raising both hands to form a rectangle frame with thumbs and forefingers, one eye closed, composing a shot. The monitor behind her shows an unframed wide scene. Oak floor, polished concrete side wall. Muted palette of stone, oak and soft gold. Late morning Mediterranean natural light from the right, rim light on her raised forearms. Close-medium shot from slightly below, capturing hands and face together. Tension between what is included and what is excluded.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/director/2.jpg"
+   },
+   {
+    "kind": "rule2",
+    "title": "כלל 2 — מי עוקב אחרי מי",
+    "prompt": "Documentary realism, Professional architecture photography.\nThe same woman with long straight dark brown hair and a sleeveless black top with faint yellow vertical stripes, standing completely still in the center of a screening room corridor, arms at her sides, while a camera on a small dolly track moves slowly past her from left to right. Her eyes follow the camera steadily, head barely turning. Pale limestone walls, oak floor, polished concrete ceiling. Muted palette of stone, oak and soft gold. Afternoon Mediterranean natural light, golden side-light catching the camera mechanism and her forearm. Wide shot, slight high angle, the dolly track visible in the foreground. Stillness against motion — who controls whom.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/director/3.jpg"
+   },
+   {
+    "kind": "rule3",
+    "title": "כלל 3 — הרגע השקט",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated alone in a screening room at the end of a row, the projection screen now dark and blank, her hands folded in her lap, gaze forward and still. The room is dim, only residual light from the projection booth window behind her casts a faint rectangle on the floor. Pale limestone floor, oak armrests, polished concrete walls. Muted palette of deep stone and fading gold. Late afternoon Mediterranean light, nearly gone. Medium-wide shot from the aisle, low angle, the empty seats in foreground blurred. The silence after the last frame — the choice not to explain.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/director/4.jpg"
+   }
+  ]
+ },
+ {
+  "id": "cinematographer",
+  "title": "הצלם קורא אור",
+  "principle": "האור לא מאיר את הסצנה — הוא הוא הסצנה",
+  "anchor": "אולפן צילום עם חלון גדול, שולחן מדידת אור, ורפלקטורים מקופלים",
+  "rules": [
+   "זהה מאין מגיע האור — לא מה הוא מאיר, אלא מה הוא מסתיר",
+   "שאל: האם האור נוח לדמות — או שהדמות נלחמת בו?",
+   "חפש את הצל שהצלם בחר להשאיר: שם נמצאת האמת של הסצנה"
+  ],
+  "images": [
+   {
+    "kind": "theme",
+    "title": "תמונת נושא",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, standing in a large empty film studio, arm raised at shoulder height with palm open and facing upward, her face tilted slightly toward a wide industrial window on the left wall that floods the space with morning light. No camera in frame. Pale limestone floor, exposed polished concrete ceiling with hanging rigs, oak production desk pushed to the right edge of frame. Muted palette of stone, oak and soft gold. Early morning Mediterranean light raking across the floor in a wide bar, casting her shadow long and sharp behind her. Wide shot, slight low angle, the woman occupies the center-left third. Stillness of reading before action.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/cinematographer/0.jpg"
+   },
+   {
+    "kind": "principle",
+    "title": "תמונת עיקרון",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated at a wide oak color-grading desk, two monitors side by side in front of her. The left monitor shows her own face lit from directly above — flat, exposed, nowhere to hide. The right monitor shows the same face lit from low below-left — dramatic, shadowed, full of hidden thought. Her eyes move between the two screens, one hand hovering near the desk without touching it. Pale limestone wall behind, polished concrete floor. Muted palette of stone, oak and soft gold. Cool neutral room light, the warmth coming only from the monitors. Medium shot, eye level. The question hanging in the frame: which one is true?\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/cinematographer/1.jpg"
+   },
+   {
+    "kind": "rule1",
+    "title": "כלל 1 — מאין מגיע האור",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, crouching low near the base of a large industrial window in a film studio, her back to camera, one hand pointing up toward the high corner of the window frame where the light enters. The floor in front of her is split: a sharp diagonal line divides full light from deep shadow. She studies the line, not the lit area. Pale limestone floor, raw concrete walls, oak production shelving to the right. Muted palette of stone, oak and cool morning blue. Raking Mediterranean morning light from the upper left, creating the diagonal across the floor. Wide shot from behind and slightly to the right, low angle. The source, not the subject.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/cinematographer/2.jpg"
+   },
+   {
+    "kind": "rule2",
+    "title": "כלל 2 — הדמות נלחמת באור",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, standing in a narrow corridor of a film studio, facing a window directly ahead of her — backlit entirely, her face in full shadow while her shoulders and arms glow in the strong light from behind. She raises one hand slightly to shield her eyes, an involuntary gesture. The window behind her is overexposed. Pale limestone corridor walls, polished concrete floor, nothing decorative. Muted palette of stone and hard white light. Mediterranean midday light, harsh and direct. Medium shot from behind a tripod stand in the left foreground, slight high angle. The body tells the truth the director won't.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/cinematographer/3.jpg"
+   },
+   {
+    "kind": "rule3",
+    "title": "כלל 3 — הצל שנשאר",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated alone in a screening room chair pulled close to a wall, half of her face fully in shadow — the left side lit, the right side swallowed by dark. Her hands are folded in her lap, her gaze forward and still. No screen, no monitor. Only the wall in front of her and the shadow that someone chose not to remove. Pale limestone floor, oak paneling on the lit side of the wall, polished concrete on the shadow side. Muted palette of deep stone and fading gold. Late afternoon Mediterranean light, entering from the left through a narrow slit at ceiling height. Close-medium shot, eye level, slightly off-center to the right. The truth lives where the light wasn't sent.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/cinematographer/4.jpg"
+   }
+  ]
+ },
+ {
+  "id": "screenwriter",
+  "title": "התסריטאי שואל למה",
+  "principle": "כל דמות רוצה משהו — ומה שהיא באמת רוצה הוא דבר אחר לחלוטין",
+  "anchor": "שולחן כתיבה ליד חלון, דפים עם מחיקות, ספל קפה קר",
+  "rules": [
+   "זהה מה הדמות אומרת שהיא רוצה — ואז שאל מה היא לא מסוגלת לומר",
+   "חפש את הרגע שבו הדמות מפסיקה לנסות — שם הסיפור האמיתי מתחיל",
+   "שאל: מה הדמות מפחדת לגלות על עצמה?"
+  ],
+  "images": [
+   {
+    "kind": "theme",
+    "title": "תמונת נושא",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated at a wide oak writing desk beside a tall window, both hands flat on a completely blank white page, her gaze directed downward at the page with quiet intensity. No pen in hand. A cold coffee cup to her left, a stack of printed script pages face-down to her right. Pale limestone wall behind her, polished concrete floor. Muted palette of stone, oak and soft gold. Late morning Mediterranean natural light from the window, falling across the blank page and her hands, leaving her face in soft half-shadow. Wide shot, slightly above eye level. The question before the first word.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/screenwriter/0.jpg"
+   },
+   {
+    "kind": "principle",
+    "title": "תמונת עיקרון",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated at an oak writing desk, holding two printed script pages side by side — one clean and formatted, one densely crossed out with handwritten margins, entire paragraphs struck through. She studies both simultaneously, eyes moving between them, expression still and unreadable. Pale limestone wall, polished concrete floor, afternoon light from a narrow window above. Muted palette of stone, oak and soft gold. Mediterranean afternoon light, low angle through the window, casting one page in warm light and leaving the other in cool shade. Medium shot, eye level. What was said and what was meant.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/screenwriter/1.jpg"
+   },
+   {
+    "kind": "rule1",
+    "title": "כלל 1 — מה לא מסוגלת לומר",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, standing at a wide oak desk covered in loose script pages, leaning forward with both hands on the desk surface, her gaze fixed on a single page where one full paragraph has been crossed out in heavy black ink, leaving only two short lines intact below it. She is not reading the remaining lines. She is reading the crossed-out paragraph. Pale limestone floor, raw concrete wall, one framed window behind her showing a grey sky. Muted palette of stone, oak and ash. Overcast Mediterranean midday light, flat and without shadow. Close-medium shot from across the desk, slightly below eye level. The struck line says more than the page.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/screenwriter/2.jpg"
+   },
+   {
+    "kind": "rule2",
+    "title": "כלל 2 — הרגע שמפסיקה לנסות",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, sitting back in an oak writing chair slightly away from the desk, arms at her sides, the script pages in front of her untouched. Her gaze is not on the desk. It has drifted to a point in the middle distance, slightly above the window line. The desk lamp is on even though there is afternoon light outside. A pen is on the floor beside the chair leg, dropped or placed, impossible to say. Pale limestone floor, polished concrete wall behind, the window showing pale winter light. Muted palette of stone, oak and cool late afternoon. Mediterranean late afternoon light, fading. Medium-wide shot from the left side of the room, slightly above. The story begins when the trying stops.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/screenwriter/3.jpg"
+   },
+   {
+    "kind": "rule3",
+    "title": "כלל 3 — מה מפחדת לגלות",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, standing at the far end of a long writing room, her back to a wall of windows, holding a single script page in one hand at her side — not reading it, not putting it down. The page faces away from camera. Her face is in three-quarter view, expression quiet but guarded, one shoulder slightly forward as if protecting something. Pale limestone floor, oak paneling on the facing wall, polished concrete ceiling. Muted palette of stone, oak and fading gold. Mediterranean dusk light from the windows behind her, backlighting her silhouette, her face illuminated only by the last warm light bouncing off the oak wall in front. Wide shot, slightly low angle. The question she will never write but already knows.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/screenwriter/4.jpg"
+   }
+  ]
+ },
+ {
+  "id": "musician",
+  "title": "המוזיקאי מרגיש לפני שהוא שומע",
+  "principle": "המוזיקה בסרט לא מסבירה את הרגש — היא יוצרת את הרגש שניה לפני שהוא מגיע",
+  "anchor": "אולפן הקלטות עם לוח מיקסר, חדר הקלטות עם מיקרופון בודד, ספה מול רמקולים",
+  "rules": [
+   "זהה מתי המוזיקה מתחילה — היא תמיד מקדימה את הסצנה בחצי נשימה",
+   "שאל: מה הגוף מרגיש לפני שהמוח מבין?",
+   "חפש את הרגע השקט בין צליל לצליל — שם המוזיקאי קיבל את ההחלטה הגדולה ביותר"
+  ],
+  "images": [
+   {
+    "kind": "theme",
+    "title": "תמונת נושא",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated at a wide professional mixing console in a recording studio, both hands resting lightly on the faders without pressing them, eyes closed, head tilted very slightly back. The console is unlit — no session running. The room behind the glass is empty. Pale limestone floor visible at the edge of the frame, oak acoustic panels on the side wall, polished concrete ceiling. Muted palette of stone, oak and soft gold. Late evening Mediterranean light from a small rectangular window above the console, one thin bar of warm light across her hands. Wide shot, slightly above and behind, the console filling the foreground. Listening before the sound begins.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/musician/0.jpg"
+   },
+   {
+    "kind": "principle",
+    "title": "תמונת עיקרון",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated at a wide oak editing desk with two monitors, the left monitor showing a film timeline with a dense audio track beneath the video, the right monitor showing the same timeline with the audio track completely empty. Her left hand points to the moment just before a cut on the left timeline, her right hand points to the identical moment on the right. Her gaze moves between both. Pale limestone wall, polished concrete floor. Muted palette of stone, oak and soft gold. Mediterranean midday light from above-left. Medium shot, eye level. Same frame — different world.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/musician/1.jpg"
+   },
+   {
+    "kind": "rule1",
+    "title": "כלל 1 — המוזיקה מתחילה חצי נשימה לפני",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, standing in a recording studio control room, one hand raised at chest height with index finger extended toward a monitor speaker on the shelf above the console, her other hand pressed flat against her sternum, over her chest. Her eyes are open but unfocused, trained inward. The speaker grille is visible but no sound is implied — only the anticipation of it. Pale limestone floor, oak acoustic panels on the wall behind the speaker, polished concrete ceiling. Muted palette of stone, oak and cool amber. Mediterranean late afternoon light from a narrow high window, rim-lighting her raised arm. Close-medium shot from the right side, slightly below eye level. The body arrives before the sound.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/musician/2.jpg"
+   },
+   {
+    "kind": "rule2",
+    "title": "כלל 2 — מה הגוף מרגיש לפני שהמוח מבין",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, seated on a low oak bench in a bare recording booth, large over-ear headphones on, eyes closed, shoulders slightly elevated — the precise physical response to music that is building toward something. Both hands rest open on her thighs. No instrument. No sheet music. Only the body translating what hasn't been understood yet. Pale limestone floor, raw concrete walls, one padded acoustic panel behind her. Muted palette of stone and soft warm grey. Diffuse Mediterranean morning light through a small square window in the ceiling, falling evenly on her from above. Medium shot, eye level, slightly to the left. The body translates before the mind speaks.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/musician/3.jpg"
+   },
+   {
+    "kind": "rule3",
+    "title": "כלל 3 — הרגע השקט בין צליל לצליל",
+    "prompt": "Documentary realism, Professional architecture photography.\nA woman with long straight dark brown hair, fair skin and a faint smile, wearing a sleeveless black top with faint yellow vertical stripes, standing completely still in a wide recording studio, both arms at her sides, facing away from camera toward an empty recording booth visible through a large glass window. The booth is dark. The control room behind her is dim. She is between two moments — after one has ended, before the next has begun. Her head is level, posture quiet, neither tense nor relaxed. Pale limestone floor, oak mixing console to her right untouched, polished concrete ceiling. Muted palette of deep stone and near-darkness. The only light: a single narrow strip of cool fluorescent light inside the dark booth, shining through the glass onto the floor at her feet. Wide shot from behind and to the right, low angle. The silence was the decision.\n16:9 --ar 16:9 --style raw --v 7 --no text, words, writing, frame divisions",
+    "file": "rooms/musician/4.jpg"
+   }
+  ]
+ }
+]
