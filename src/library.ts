@@ -8,8 +8,11 @@ export interface LPerson {
   wiki: { he: string | null; en: string | null };
   films: { f: string; roles: RoomId[] }[]; nFilms: number;
   collab?: { id: string; films: string[]; n: number }[];
+  persp: { p: "a" | "b" | "m"; lens: string; sees: string; asks: string } | null;
+  imdb: string | null; mb: string | null;
 }
-export interface LFilm { id: string; he: string; en: string; year: number | null; credits: Record<RoomId, { id: string | null; name: string; en: string }[]> }
+export interface LImg { src: string; author: string; license: string; licenseUrl: string; page: string }
+export interface LFilm { id: string; he: string; en: string; year: number | null; credits: Record<RoomId, { id: string | null; name: string; en: string }[]>; imdb: string | null; wiki: { he: string | null; en: string | null }; img: LImg | null }
 export interface LEra { id: string; title: string; from: number; to: number; insight: string; text: string; people: string[] }
 export interface Library {
   generated: string; source: string;
@@ -39,4 +42,4 @@ export const years = (p: LPerson) => (p.born ? `${p.born}${p.died ? ` – ${p.di
 export const ftitle = (f: LFilm) => ({ main: f.he || f.en, sub: f.he ? f.en : "" });
 
 export const nFilms = (n: number) => (n === 1 ? "סרט אחד" : `${n} סרטים`);
-export const shortAuthor = (a: string) => (a.length > 70 ? a.slice(0, 67).replace(/[ ,]+\S*$/, "") + "..." : a);
+export const shortAuthor = (raw: string) => { const a = raw.replace(/^(.{3,}?)\1$/, "$1"); return a.length > 70 ? a.slice(0, 67).replace(/[ ,]+\S*$/, "") + "..." : a; };

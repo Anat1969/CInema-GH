@@ -9,7 +9,8 @@ export interface Profile {
 }
 export type PublicProfile = Omit<Profile, "id" | "is_shared" | "share_token">;
 
-const FN = "https://ktqmwpbzcnzkhjskqisy.supabase.co/functions/v1/kolnoe";
+const BASE = "https://ktqmwpbzcnzkhjskqisy.supabase.co/functions/v1/";
+const FN = BASE + "kolnoe";
 let memKey = "";
 
 export function deviceKey(): string {
@@ -26,10 +27,10 @@ export function deviceKey(): string {
   }
 }
 
-export async function api<T>(body: Record<string, unknown>): Promise<T> {
+export async function api<T>(body: Record<string, unknown>, fn = "kolnoe"): Promise<T> {
   let r: Response;
   try {
-    r = await fetch(FN, {
+    r = await fetch(BASE + fn, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...body, deviceKey: deviceKey() }),

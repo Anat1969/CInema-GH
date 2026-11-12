@@ -16,8 +16,10 @@ export function curl(args, tries = 6) {
 }
 export function sparql(query) {
   writeFileSync("/tmp/claude-0/q.rq", query);
-  const out = curl(["-X", "POST", "-H", "Accept: application/sparql-results+json", "--data-urlencode", "query@/tmp/claude-0/q.rq", "https://query.wikidata.org/sparql"]);
-  try { return JSON.parse(out).results.bindings; } catch { throw new Error("bad sparql: " + out.slice(0, 300)); }
+  for (let i = 0; i < 4; i++) {
+    const out = curl(["-X", "POST", "-H", "Accept: application/sparql-results+json", "--data-urlencode", "query@/tmp/claude-0/q.rq", "https://query.wikidata.org/sparql"]);
+    try { return JSON.parse(out).results.bindings; } catch { if (i === 3) throw new Error("bad sparql: " + out.slice(0, 300)); Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 15000 * (i + 1)); }
+  }
 }
 export const qid = (u) => u.split("/").pop();
 export const v = (b, k) => b[k]?.value;

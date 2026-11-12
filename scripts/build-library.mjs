@@ -5,8 +5,11 @@ const imgs = existsSync("scripts/.cache/images.json") ? JSON.parse(readFileSync(
 const bios = existsSync("scripts/.cache/bios.json") ? JSON.parse(readFileSync("scripts/.cache/bios.json", "utf8")) : { he: {}, en: {} };
 const eras = JSON.parse(readFileSync("scripts/eras.json", "utf8"));
 const resolved = JSON.parse(readFileSync("scripts/.cache/resolved.json", "utf8"));
+const persp = existsSync("scripts/perspectives.json") ? JSON.parse(readFileSync("scripts/perspectives.json", "utf8")) : {};
+const media = existsSync("scripts/.cache/media.json") ? JSON.parse(readFileSync("scripts/.cache/media.json", "utf8")) : { people: {}, films: {} };
 const hebrewBios = existsSync("scripts/bios-he.json") ? JSON.parse(readFileSync("scripts/bios-he.json", "utf8")) : {};
 
+const isImage = (f) => { try { const b = readFileSync(f).subarray(0, 4); return (b[0] === 0xff && b[1] === 0xd8) || (b[0] === 0x89 && b[1] === 0x50) || (b[0] === 0x52 && b[1] === 0x49); } catch { return false; } };
 const nameToId = {};
 for (const list of Object.values(resolved)) for (const x of list) nameToId[x.name] = x.id;
 const clip = (t, n = 420) => {
@@ -38,10 +41,13 @@ for (const p of Object.values(raw.persons)) {
     countries: p.countries.slice(0, 2),
     descHe: hasHeb(p.dhe) ? p.dhe : "", descEn: p.den || "",
     bioHe: hebrewBios[p.id] || clip(bios.he?.[p.id]), bioEn: clip(bios.en?.[p.id]),
-    img: img?.thumb ? { src: `/people/${p.id}.jpg`, author: img.author, license: img.license, licenseUrl: img.licenseUrl, page: img.page } : null,
+    img: img?.thumb && isImage(`public/people/${p.id}.jpg`) ? { src: `/people/${p.id}.jpg`, author: img.author, license: img.license, licenseUrl: img.licenseUrl, page: img.page } : null,
     wiki: { he: p.hew || null, en: p.enw || null },
     films: fl.slice(0, 14),
     nFilms: fl.length,
+    persp: persp[p.id] || null,
+    imdb: media.people?.[p.id]?.imdb || null,
+    mb: media.people?.[p.id]?.mb || null,
   };
 }
 // films kept: those on any person's top list
@@ -54,7 +60,9 @@ const addFilm = (id) => {
   for (const role of ["director", "cinematographer", "screenwriter", "musician"]) {
     cr[role] = (f.credits[role] || []).slice(0, 4).map((c) => ({ id: people[c.id] ? c.id : null, name: (hasHeb(c.he) ? c.he : "") || c.en || "", en: c.en || "" }));
   }
-  filmsOut[id] = { id, he: hasHeb(f.he) ? f.he : "", en: f.en || "", year: f.year, credits: cr };
+  const m = media.films?.[id] || {};
+  filmsOut[id] = { id, he: hasHeb(f.he) ? f.he : "", en: f.en || "", year: f.year, credits: cr, imdb: m.imdb || null, wiki: { he: m.he || null, en: m.en || null },
+    img: m.meta?.thumb && isImage(`public/films/${id}.jpg`) ? { src: `/films/${id}.jpg`, author: m.meta.author, license: m.meta.license, licenseUrl: m.meta.licenseUrl, page: m.meta.page } : null };
 };
 for (const id of keep) addFilm(id);
 // collaboration edges among key people (shared notable films, 25+ sitelinks)
@@ -83,4 +91,4 @@ mkdirSync("public/data", { recursive: true });
 const lib = { generated: new Date().toISOString().slice(0, 10), source: "Wikidata (CC0), Wikipedia (CC BY-SA), Wikimedia Commons", people, films: filmsOut, strong, eras: erasOut };
 writeFileSync("public/data/library.json", JSON.stringify(lib));
 const P = Object.values(people);
-console.log({ people: P.length, withHe: P.filter((p) => p.he).length, withImg: P.filter((p) => p.img).length, bioHe: P.filter((p) => p.bioHe).length, bioEn: P.filter((p) => p.bioEn).length, films: Object.keys(filmsOut).length, filmsHe: Object.values(filmsOut).filter((f) => f.he).length, edges: edges.length, strong: strong.length, unknownEraNames: [...new Set(unknown)] });
+console.log({ people: P.length, withHe: P.filter((p) => p.he).length, withImg: P.filter((p) => p.img).length, persp: P.filter((p) => p.persp).length, imdb: P.filter((p) => p.imdb).length, filmImg: Object.values(filmsOut).filter((f) => f.img).length, filmImdb: Object.values(filmsOut).filter((f) => f.imdb).length, bioHe: P.filter((p) => p.bioHe).length, bioEn: P.filter((p) => p.bioEn).length, films: Object.keys(filmsOut).length, filmsHe: Object.values(filmsOut).filter((f) => f.he).length, edges: edges.length, strong: strong.length, unknownEraNames: [...new Set(unknown)] });

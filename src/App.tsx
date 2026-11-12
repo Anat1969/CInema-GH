@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { isRoom, type RoomMeta } from "./data";
 import { JourneyProvider, useJourney } from "./journey";
+import { NavProvider } from "./nav";
 import { TopBar } from "./components/TopBar";
 import { Entrance } from "./components/Entrance";
 import { RoomView } from "./components/RoomView";
@@ -10,20 +11,25 @@ import { Archive } from "./components/Archive";
 import { Shared } from "./components/Shared";
 import { Prompts } from "./components/Prompts";
 import { Library } from "./components/Library";
-import { FieldPage, FilmPage, PersonPage } from "./components/LibraryPages";
+import { FilmPage, PersonPage } from "./components/LibraryPages";
 
 const parse = () => (location.hash.replace(/^#\/?/, "") || "").split("?")[0];
 export type { RoomMeta };
 
+function Redirect({ to }: { to: string }) {
+  useEffect(() => { location.replace(to); }, [to]);
+  return null;
+}
+
 function Screen({ route }: { route: string }) {
   const [kind, arg] = route.split("/");
-  if (kind === "room" && isRoom(arg ?? "")) return <RoomView key={arg} id={arg as never} />;
+  if (kind === "room" && isRoom(arg ?? "")) return <RoomView key={arg} id={arg as never} tab={route.split("/")[2]} />;
   if (kind === "discovery") return <Discovery />;
   if (kind === "studio" && arg) return <Studio key={arg} profileId={arg} />;
   if (kind === "archive") return <Archive />;
   if (kind === "s" && arg) return <Shared token={arg} />;
   if (kind === "prompts") return <Prompts />;
-  if (kind === "library" && arg && isRoom(arg)) return <FieldPage key={arg} role={arg as never} />;
+  if (kind === "library" && arg && isRoom(arg)) return <Redirect to={`#/room/${arg}/evolution`} />;
   if (kind === "library") return <Library />;
   if (kind === "person" && arg) return <PersonPage key={arg} id={arg} />;
   if (kind === "film" && arg) return <FilmPage key={arg} id={arg} />;
@@ -48,5 +54,5 @@ function Shell() {
 }
 
 export default function App() {
-  return <JourneyProvider><Shell /></JourneyProvider>;
+  return <JourneyProvider><NavProvider><Shell /></NavProvider></JourneyProvider>;
 }
