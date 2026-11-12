@@ -3,6 +3,7 @@ import { api, type Concept, type Msg } from "../api";
 import { roomMeta } from "../data";
 import { useJourney } from "../journey";
 import { Backdrop } from "./Scene";
+import { Crumbs, Pager } from "../nav";
 import { ChatStage } from "./ChatStage";
 
 export function Studio({ profileId }: { profileId: string }) {
@@ -38,22 +39,24 @@ export function Studio({ profileId }: { profileId: string }) {
   }
   const turns = msgs.filter((m) => m.role === "user").length;
   const c = concept ?? profile?.film_concept ?? null;
+  const m = roomMeta("director");
   return (
-    <section className="room studio" style={{ ["--hue" as string]: "#10101a", ["--soft" as string]: "#E9D9A8" }}>
-      <Backdrop room={room} variant={concept ? 4 : 3} p={c ? 1 : Math.min(turns / 5, 0.9)} />
-      <div className="room-shade" />
-      <div className="room-head">
-        <div>
-          <span className="mono">אולפן היצירה — {profile?.worldview_name}</span>
+    <section className="room studio" style={{ ["--hue" as string]: "#8E8A7A", ["--soft" as string]: "#E6D9B4", ["--tint" as string]: "#F6F1E4", ["--deep" as string]: "#3F3A2C" }}>
+      <header className="hero">
+        <Backdrop room={m} variant={concept ? 4 : 3} p={c ? 1 : Math.min(turns / 5, 0.9)} />
+        <div className="hero-veil" />
+        <div className="hero-in">
+          <Crumbs items={[{ label: "בית", href: "#/" }, { label: "תפיסת העולם", href: "#/discovery" }, { label: "אולפן היצירה" }]} />
+          <p className="mono">אולפן היצירה — {profile?.worldview_name}</p>
           <h1 className="room-q">הסרט שלך</h1>
+          <p className="mono">{c ? "הקונספט מוכן" : `שאלה ${Math.min(turns + 1, 5)} מתוך 5`}</p>
         </div>
-        <span className="mono">{c ? "הקונספט מוכן" : `שאלה ${Math.min(turns + 1, 5)} מתוך 5`}</span>
-      </div>
-      <div className="room-body">
+      </header>
+      <div className="room-content">
         {c ? (
           <div className="concept">
             <p className="mono">הרעיון</p>
-            <p className="idea"><mark>{c.idea}</mark></p>
+            <p className="idea-text"><mark>{c.idea}</mark></p>
             <div className="two">
               <div><p className="mono">הפריים הראשון</p><p>{c.frame}</p></div>
               <div><p className="mono">הצליל הראשון</p><p>{c.sound}</p></div>
@@ -61,15 +64,18 @@ export function Studio({ profileId }: { profileId: string }) {
             <div className="row"><a className="btn primary" href="#/archive">לארכיון הגילויים</a><a className="btn soft" href="#/discovery">לתפיסת העולם</a></div>
           </div>
         ) : (
-          <ChatStage draftKey={`kno_draft_studio_${profileId}`} messages={msgs} busy={busy} error={error} done={false}
-            onSend={send} placeholder="כתבו כאן, או הקליטו. Ctrl+Enter לשליחה." />
+          <div className="chat-grid">
+            <ChatStage draftKey={`kno_draft_studio_${profileId}`} messages={msgs} busy={busy} error={error} done={false}
+              onSend={send} placeholder="כתבו כאן, או הקליטו. Ctrl+Enter לשליחה." />
+            <aside className="trail">
+              <span className="mono">מתוך התפיסה</span>
+              <p className="trail-name trail-principle">{profile?.worldview_name}</p>
+              <div className="meter"><i style={{ width: `${Math.min(turns / 5, 1) * 100}%` }} /></div>
+            </aside>
+          </div>
         )}
-        <aside className="trail">
-          <span className="mono">מתוך התפיסה</span>
-          <p className="trail-name">{profile?.worldview_name}</p>
-          <div className="meter"><i style={{ width: `${c ? 100 : Math.min(turns / 5, 1) * 100}%` }} /></div>
-        </aside>
       </div>
+      <Pager prev={{ label: "תפיסת העולם", href: "#/discovery" }} next={{ label: "ארכיון הגילויים", href: "#/archive" }} up={{ label: "כל ארבעת החדרים", href: "#/library" }} />
     </section>
   );
 }

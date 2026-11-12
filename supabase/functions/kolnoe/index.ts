@@ -170,7 +170,7 @@ async function callsLastHour(owner: string): Promise<number> {
   return Number((r.headers.get("content-range") ?? "").split("/")[1]) || 0;
 }
 
-async function claude(system: string, history: Msg[], maxTokens = 700): Promise<string> {
+async function claude(system: string, history: Msg[], maxTokens = 2000): Promise<string> {
   const key = Deno.env.get("ANTHROPIC_API_KEY")?.trim();
   if (!key) throw new Error("no-key");
   // The API needs the first message to be a user message.
@@ -186,7 +186,9 @@ async function claude(system: string, history: Msg[], maxTokens = 700): Promise<
   });
   if (!r.ok) throw new Error(`claude ${r.status}`);
   const j = await r.json();
-  return (j.content ?? []).filter((b: Row) => b.type === "text").map((b: Row) => String(b.text)).join("").trim();
+  const text = (j.content ?? []).filter((b: Row) => b.type === "text").map((b: Row) => String(b.text)).join("").trim();
+  if (!text) throw new Error("empty reply");
+  return text;
 }
 
 // One question per message: keep everything up to the first question mark.
@@ -312,7 +314,7 @@ async function discover(owner: string) {
 הביטויים לקוחים מדברי המשתמש ומהתובנות. אל תמציא עובדות.`;
   let out: Row;
   try {
-    const raw = await claude(sys, [{ role: "user", content: insights, timestamp: now() }], 500);
+    const raw = await claude(sys, [{ role: "user", content: insights, timestamp: now() }], 2000);
     out = JSON.parse(raw.slice(raw.indexOf("{"), raw.lastIndexOf("}") + 1));
   } catch (e) {
     return json({ error: "הקולנוען לא הצליח לנסח את התפיסה. נסו שוב.", detail: String((e as Error).message) }, 502);
@@ -351,7 +353,7 @@ async function studio(owner: string, b: Row) {
   const userTurns = messages.filter((m) => m.role === "user").length;
   let raw: string;
   try {
-    raw = await claude(studioSystem(profile, userTurns), messages, 600);
+    raw = await claude(studioSystem(profile, userTurns), messages, 2000);
   } catch (e) {
     return json({ error: "הקולנוען לא זמין כרגע. נסו שוב בעוד רגע.", detail: String((e as Error).message) }, 502);
   }

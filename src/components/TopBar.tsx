@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { DEV_CHAT, ROOMS } from "../data";
 import { useJourney } from "../journey";
+import { BackForward } from "../nav";
 
 interface InstallEvent extends Event { prompt: () => Promise<void> }
 
@@ -23,9 +24,10 @@ export function TopBar({ route }: { route: string }) {
   return (
     <header className="topbar">
       <a className="brand" href="#/" aria-label="קולנועע, לדף הבית">קולנועע</a>
+      <BackForward />
       <nav className="rooms-nav" aria-label="חדרים">
         {ROOMS.map((r) => (
-          <a key={r.id} href={`#/room/${r.id}`} className={route === `room/${r.id}` ? "on" : ""} style={{ ["--hue" as string]: r.soft }}>
+          <a key={r.id} href={`#/room/${r.id}`} className={route.startsWith(`room/${r.id}`) ? "on" : ""} style={{ ["--hue" as string]: r.soft }}>
             <i className="dot" />{r.role}{completed.includes(r.id) && <span className="done-tag">הושלם</span>}
           </a>
         ))}

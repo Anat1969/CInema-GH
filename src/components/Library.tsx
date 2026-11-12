@@ -1,22 +1,16 @@
 import { useMemo, useState } from "react";
 import { ROOMS, roomMeta } from "../data";
 import type { RoomId } from "../api";
+import { Face } from "./ui";
 import { ftitle, nFilms, pname, ROLE_HE, useLibrary, years, type LEra, type Library as Lib, type LPerson } from "../library";
 
 const MIN = 1895, MAX = 2026;
 const pos = (y: number) => ((y - MIN) / (MAX - MIN)) * 100; // 0 at the right edge: the past, as in a Hebrew line
 
-export function Face({ p, size = 44 }: { p: LPerson; size?: number }) {
-  const m = roomMeta(p.roles[0]);
-  return p.img
-    ? <img className="face" src={p.img.src} alt="" width={size} height={size} loading="lazy" style={{ width: size, height: size }} />
-    : <span className="face blank" style={{ width: size, height: size, background: m.hue, color: m.soft }}>{pname(p).main.slice(0, 1)}</span>;
-}
-
 function EraPanel({ lib, role, era }: { lib: Lib; role: RoomId; era: LEra }) {
   const m = roomMeta(role);
   return (
-    <div className="era-panel" style={{ ["--soft" as string]: m.soft, ["--hue" as string]: m.hue }}>
+    <div className="era-panel" style={{ ["--soft" as string]: m.soft, ["--hue" as string]: m.hue, ["--tint" as string]: m.tint, ["--deep" as string]: m.deep }}>
       <p className="mono">{m.role} — {era.from}–{era.to}</p>
       <h2>{era.title}</h2>
       <p className="era-insight"><mark>{era.insight}</mark></p>
@@ -40,7 +34,7 @@ function Timeline({ lib }: { lib: Lib }) {
       <div className="lanes" role="group" aria-label="ציר אבולוציה של ארבעת התחומים">
         <div className="axis">{ticks.map((t) => <span key={t} style={{ right: `${pos(t)}%` }}>{t}</span>)}</div>
         {ROOMS.map((r) => (
-          <div key={r.id} className="lane" style={{ ["--hue" as string]: r.hue, ["--soft" as string]: r.soft }}>
+          <div key={r.id} className="lane" style={{ ["--hue" as string]: r.hue, ["--soft" as string]: r.soft, ["--tint" as string]: r.tint, ["--deep" as string]: r.deep }}>
             <a className="lane-name" href={`#/library/${r.id}`}>{r.role}</a>
             <div className="lane-track">
               {lib.eras[r.id].map((e, i) => (

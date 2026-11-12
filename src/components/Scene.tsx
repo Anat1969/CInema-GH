@@ -12,7 +12,7 @@ export function Scene({ room, variant, p = 0.2 }: { room: RoomMeta; variant: num
       <defs>
         <linearGradient id={`bg-${id}`} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor={room.hue} />
-          <stop offset="0.6" stopColor="#0b0b10" />
+          <stop offset="0.6" stopColor={room.deep} />
           <stop offset="1" stopColor={room.hue} />
         </linearGradient>
         <linearGradient id={`bar-${id}`} x1="0" y1="0" x2="1" y2="0">
