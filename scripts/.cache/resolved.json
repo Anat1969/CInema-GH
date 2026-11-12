@@ -1,0 +1,542 @@
+{
+ "director": [
+  {
+   "name": "D. W. Griffith",
+   "id": "Q51123"
+  },
+  {
+   "name": "Sergei Eisenstein",
+   "id": "Q8003"
+  },
+  {
+   "name": "F. W. Murnau",
+   "id": "Q55412"
+  },
+  {
+   "name": "Fritz Lang",
+   "id": "Q19504"
+  },
+  {
+   "name": "Charlie Chaplin",
+   "id": "Q882"
+  },
+  {
+   "name": "Buster Keaton",
+   "id": "Q103949"
+  },
+  {
+   "name": "Alfred Hitchcock",
+   "id": "Q7374"
+  },
+  {
+   "name": "Orson Welles",
+   "id": "Q24829"
+  },
+  {
+   "name": "John Ford",
+   "id": "Q51114"
+  },
+  {
+   "name": "Akira Kurosawa",
+   "id": "Q8006"
+  },
+  {
+   "name": "Yasujirō Ozu",
+   "id": "Q55402"
+  },
+  {
+   "name": "Kenji Mizoguchi",
+   "id": "Q55401"
+  },
+  {
+   "name": "Ingmar Bergman",
+   "id": "Q7546"
+  },
+  {
+   "name": "Federico Fellini",
+   "id": "Q7371"
+  },
+  {
+   "name": "Roberto Rossellini",
+   "id": "Q53003"
+  },
+  {
+   "name": "Michelangelo Antonioni",
+   "id": "Q55433"
+  },
+  {
+   "name": "Jean-Luc Godard",
+   "id": "Q53001"
+  },
+  {
+   "name": "François Truffaut",
+   "id": "Q53002"
+  },
+  {
+   "name": "Agnès Varda",
+   "id": "Q229990"
+  },
+  {
+   "name": "Satyajit Ray",
+   "id": "Q8873"
+  },
+  {
+   "name": "Andrei Tarkovsky",
+   "id": "Q853"
+  },
+  {
+   "name": "Stanley Kubrick",
+   "id": "Q2001"
+  },
+  {
+   "name": "Francis Ford Coppola",
+   "id": "Q56094"
+  },
+  {
+   "name": "Martin Scorsese",
+   "id": "Q41148"
+  },
+  {
+   "name": "Steven Spielberg",
+   "id": "Q8877"
+  },
+  {
+   "name": "Krzysztof Kieślowski",
+   "id": "Q55165"
+  },
+  {
+   "name": "Wong Kar-wai",
+   "id": "Q55431"
+  },
+  {
+   "name": "Pedro Almodóvar",
+   "id": "Q55171"
+  },
+  {
+   "name": "Abbas Kiarostami",
+   "id": "Q55210"
+  },
+  {
+   "name": "Jane Campion",
+   "id": "Q230448"
+  },
+  {
+   "name": "Wim Wenders",
+   "id": "Q55411"
+  },
+  {
+   "name": "Bong Joon-ho",
+   "id": "Q495980"
+  },
+  {
+   "name": "Hayao Miyazaki",
+   "id": "Q55400"
+  },
+  {
+   "name": "Amos Gitai",
+   "id": "Q474262"
+  },
+  {
+   "name": "Terrence Malick",
+   "id": "Q215478"
+  },
+  {
+   "name": "David Lynch",
+   "id": "Q2071"
+  },
+  {
+   "name": "Paul Thomas Anderson",
+   "id": "Q25132"
+  },
+  {
+   "name": "Denis Villeneuve",
+   "id": "Q548823"
+  },
+  {
+   "name": "Ava DuVernay",
+   "id": "Q4827381"
+  },
+  {
+   "name": "Christopher Nolan",
+   "id": "Q25191"
+  }
+ ],
+ "cinematographer": [
+  {
+   "name": "Karl Freund",
+   "id": "Q62099"
+  },
+  {
+   "name": "Gregg Toland",
+   "id": "Q166000"
+  },
+  {
+   "name": "Freddie Young",
+   "id": "Q965659"
+  },
+  {
+   "name": "Jack Cardiff",
+   "id": "Q436704"
+  },
+  {
+   "name": "Sven Nykvist",
+   "id": "Q312290"
+  },
+  {
+   "name": "Raoul Coutard",
+   "id": "Q387323"
+  },
+  {
+   "name": "Henri Alekan",
+   "id": "Q958139"
+  },
+  {
+   "name": "Giuseppe Rotunno",
+   "id": "Q1347338"
+  },
+  {
+   "name": "Gianni Di Venanzo",
+   "id": "Q1522660"
+  },
+  {
+   "name": "Néstor Almendros",
+   "id": "Q155423"
+  },
+  {
+   "name": "Vittorio Storaro",
+   "id": "Q363413"
+  },
+  {
+   "name": "Gordon Willis",
+   "id": "Q560108"
+  },
+  {
+   "name": "Vilmos Zsigmond",
+   "id": "Q963628"
+  },
+  {
+   "name": "Robby Müller",
+   "id": "Q384784"
+  },
+  {
+   "name": "Michael Ballhaus",
+   "id": "Q62547"
+  },
+  {
+   "name": "Darius Khondji",
+   "id": "Q951018"
+  },
+  {
+   "name": "Christopher Doyle",
+   "id": "Q457890"
+  },
+  {
+   "name": "Roger Deakins",
+   "id": "Q460277"
+  },
+  {
+   "name": "Emmanuel Lubezki",
+   "id": "Q704378"
+  },
+  {
+   "name": "Janusz Kamiński",
+   "id": "Q365230"
+  },
+  {
+   "name": "Robert Richardson",
+   "id": "Q364017"
+  },
+  {
+   "name": "Hoyte van Hoytema",
+   "id": "Q514003"
+  },
+  {
+   "name": "Greig Fraser",
+   "id": "Q17715100"
+  },
+  {
+   "name": "Rachel Morrison",
+   "id": "Q19668712"
+  },
+  {
+   "name": "Sayombhu Mukdeeprom",
+   "id": "Q13022292"
+  },
+  {
+   "name": "Ari Wegner",
+   "id": "Q96585506"
+  },
+  {
+   "name": "Linus Sandgren",
+   "id": "Q6092676"
+  },
+  {
+   "name": "Edward Lachman",
+   "id": "Q616171"
+  },
+  {
+   "name": "Billy Bitzer",
+   "id": "Q329965"
+  }
+ ],
+ "screenwriter": [
+  {
+   "name": "Herman J. Mankiewicz",
+   "id": "Q956533"
+  },
+  {
+   "name": "Ben Hecht",
+   "id": "Q267441"
+  },
+  {
+   "name": "Preston Sturges",
+   "id": "Q546204"
+  },
+  {
+   "name": "Billy Wilder",
+   "id": "Q51547"
+  },
+  {
+   "name": "Dalton Trumbo",
+   "id": "Q350666"
+  },
+  {
+   "name": "Ernest Lehman",
+   "id": "Q1356427"
+  },
+  {
+   "name": "Emeric Pressburger",
+   "id": "Q55230"
+  },
+  {
+   "name": "Paddy Chayefsky",
+   "id": "Q180251"
+  },
+  {
+   "name": "Robert Towne",
+   "id": "Q721922"
+  },
+  {
+   "name": "William Goldman",
+   "id": "Q506885"
+  },
+  {
+   "name": "Jean-Claude Carrière",
+   "id": "Q551429"
+  },
+  {
+   "name": "Tonino Guerra",
+   "id": "Q460095"
+  },
+  {
+   "name": "Cesare Zavattini",
+   "id": "Q469164"
+  },
+  {
+   "name": "Éric Rohmer",
+   "id": "Q50764"
+  },
+  {
+   "name": "Krzysztof Piesiewicz",
+   "id": "Q59549"
+  },
+  {
+   "name": "Nora Ephron",
+   "id": "Q214677"
+  },
+  {
+   "name": "Paul Schrader",
+   "id": "Q363989"
+  },
+  {
+   "name": "Charlie Kaufman",
+   "id": "Q312751"
+  },
+  {
+   "name": "Aaron Sorkin",
+   "id": "Q299194"
+  },
+  {
+   "name": "Quentin Tarantino",
+   "id": "Q3772"
+  },
+  {
+   "name": "Eric Roth",
+   "id": "Q942932"
+  },
+  {
+   "name": "Diablo Cody",
+   "id": "Q230795"
+  },
+  {
+   "name": "Jordan Peele",
+   "id": "Q3371986"
+  },
+  {
+   "name": "Michael Haneke",
+   "id": "Q84199"
+  },
+  {
+   "name": "Asghar Farhadi",
+   "id": "Q334242"
+  },
+  {
+   "name": "Guillermo Arriaga",
+   "id": "Q540725"
+  },
+  {
+   "name": "Phoebe Waller-Bridge",
+   "id": "Q16224046"
+  },
+  {
+   "name": "Joseph Cedar",
+   "id": "Q609873"
+  },
+  {
+   "name": "Hanan Peled",
+   "id": "Q16133069"
+  },
+  {
+   "name": "Ruth Prawer Jhabvala",
+   "id": "Q235759"
+  },
+  {
+   "name": "Michael Wilson",
+   "id": "Q25871"
+  },
+  {
+   "name": "Greta Gerwig",
+   "id": "Q271967"
+  }
+ ],
+ "musician": [
+  {
+   "name": "Max Steiner",
+   "id": "Q350704"
+  },
+  {
+   "name": "Erich Wolfgang Korngold",
+   "id": "Q313371"
+  },
+  {
+   "name": "Bernard Herrmann",
+   "id": "Q296804"
+  },
+  {
+   "name": "Miklós Rózsa",
+   "id": "Q319396"
+  },
+  {
+   "name": "Alex North",
+   "id": "Q349448"
+  },
+  {
+   "name": "Elmer Bernstein",
+   "id": "Q111436"
+  },
+  {
+   "name": "Henry Mancini",
+   "id": "Q185928"
+  },
+  {
+   "name": "Nino Rota",
+   "id": "Q214665"
+  },
+  {
+   "name": "Ennio Morricone",
+   "id": "Q23848"
+  },
+  {
+   "name": "Georges Delerue",
+   "id": "Q435034"
+  },
+  {
+   "name": "Michel Legrand",
+   "id": "Q313281"
+  },
+  {
+   "name": "Maurice Jarre",
+   "id": "Q105487"
+  },
+  {
+   "name": "Jerry Goldsmith",
+   "id": "Q235077"
+  },
+  {
+   "name": "John Williams",
+   "id": "Q131285"
+  },
+  {
+   "name": "Ryuichi Sakamoto",
+   "id": "Q345494"
+  },
+  {
+   "name": "Vangelis",
+   "id": "Q153172"
+  },
+  {
+   "name": "Philip Glass",
+   "id": "Q189729"
+  },
+  {
+   "name": "Howard Shore",
+   "id": "Q207773"
+  },
+  {
+   "name": "Danny Elfman",
+   "id": "Q193338"
+  },
+  {
+   "name": "Hans Zimmer",
+   "id": "Q76364"
+  },
+  {
+   "name": "Angelo Badalamenti",
+   "id": "Q357014"
+  },
+  {
+   "name": "Thomas Newman",
+   "id": "Q319996"
+  },
+  {
+   "name": "Alexandre Desplat",
+   "id": "Q313362"
+  },
+  {
+   "name": "Joe Hisaishi",
+   "id": "Q275900"
+  },
+  {
+   "name": "Jóhann Jóhannsson",
+   "id": "Q428347"
+  },
+  {
+   "name": "Ludwig Göransson",
+   "id": "Q1358202"
+  },
+  {
+   "name": "Hildur Guðnadóttir",
+   "id": "Q433734"
+  },
+  {
+   "name": "Clint Mansell",
+   "id": "Q297232"
+  },
+  {
+   "name": "Trent Reznor",
+   "id": "Q282722"
+  },
+  {
+   "name": "Sergei Prokofiev",
+   "id": "Q49481"
+  },
+  {
+   "name": "Dmitri Shostakovich",
+   "id": "Q80135"
+  },
+  {
+   "name": "Tōru Takemitsu",
+   "id": "Q155467"
+  }
+ ]
+}

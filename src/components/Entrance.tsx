@@ -33,6 +33,7 @@ export function Entrance() {
         ) : (
           <p className="muted">חדר הגילוי נפתח אחרי ארבעת החדרים. הושלמו {completed.length} מתוך 4.</p>
         )}
+        <a className="btn primary" href="#/library">הספרייה: ההיסטוריה של כל תחום</a>
         <a className="btn soft" href="#/archive">ארכיון הגילויים</a>
         <span className="muted small">{ready && error ? <>אין חיבור לשרת. <button className="link" onClick={() => void reload()}>ניסיון נוסף</button></> : "ההתקדמות נשמרת במכשיר הזה, בלי סיסמה."}</span>
       </div>

@@ -9,6 +9,8 @@ import { Studio } from "./components/Studio";
 import { Archive } from "./components/Archive";
 import { Shared } from "./components/Shared";
 import { Prompts } from "./components/Prompts";
+import { Library } from "./components/Library";
+import { FieldPage, FilmPage, PersonPage } from "./components/LibraryPages";
 
 const parse = () => (location.hash.replace(/^#\/?/, "") || "").split("?")[0];
 export type { RoomMeta };
@@ -21,6 +23,10 @@ function Screen({ route }: { route: string }) {
   if (kind === "archive") return <Archive />;
   if (kind === "s" && arg) return <Shared token={arg} />;
   if (kind === "prompts") return <Prompts />;
+  if (kind === "library" && arg && isRoom(arg)) return <FieldPage key={arg} role={arg as never} />;
+  if (kind === "library") return <Library />;
+  if (kind === "person" && arg) return <PersonPage key={arg} id={arg} />;
+  if (kind === "film" && arg) return <FilmPage key={arg} id={arg} />;
   return <Entrance />;
 }
 
