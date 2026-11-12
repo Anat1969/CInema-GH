@@ -30,6 +30,7 @@ export function TopBar({ route }: { route: string }) {
           </a>
         ))}
         <a href="#/discovery" className={`${route === "discovery" ? "on" : ""} ${all ? "" : "locked"}`}>הגילוי</a>
+        <a href="#/library" className={route.startsWith("library") || route.startsWith("person") || route.startsWith("film") ? "on" : ""}>הספרייה</a>
       </nav>
       <button className="menu-btn" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-label="תפריט">
         <span className="logo-mark" aria-hidden="true" /> תפריט
@@ -39,6 +40,7 @@ export function TopBar({ route }: { route: string }) {
           <div className="menu-group">
             {ROOMS.map((r) => (<a key={r.id} href={`#/room/${r.id}`} role="menuitem">{r.name}</a>))}
             <a href="#/discovery" role="menuitem">חדר הגילוי</a>
+            <a href="#/library" role="menuitem">הספרייה: אבולוציה ושיתופי פעולה</a>
             <a href="#/archive" role="menuitem">ארכיון הגילויים</a>
           </div>
           <div className="menu-group">

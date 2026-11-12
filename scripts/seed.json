@@ -1,0 +1,18 @@
+{
+  "director": {
+    "occupation": ["Q2526255"],
+    "names": ["D. W. Griffith","Sergei Eisenstein","F. W. Murnau","Fritz Lang","Charlie Chaplin","Buster Keaton","Alfred Hitchcock","Orson Welles","John Ford","Akira Kurosawa","Yasujirō Ozu","Kenji Mizoguchi","Ingmar Bergman","Federico Fellini","Roberto Rossellini","Michelangelo Antonioni","Jean-Luc Godard","François Truffaut","Agnès Varda","Satyajit Ray","Andrei Tarkovsky","Stanley Kubrick","Francis Ford Coppola","Martin Scorsese","Steven Spielberg","Krzysztof Kieślowski","Wong Kar-wai","Pedro Almodóvar","Abbas Kiarostami","Jane Campion","Wim Wenders","Christopher Nolan","Bong Joon-ho","Hayao Miyazaki","Amos Gitai","Terrence Malick","David Lynch","Paul Thomas Anderson","Denis Villeneuve","Ava DuVernay"]
+  },
+  "cinematographer": {
+    "occupation": ["Q222344"],
+    "names": ["G. W. Bitzer","Karl Freund","Gregg Toland","Freddie Young","Jack Cardiff","Sven Nykvist","Raoul Coutard","Henri Alekan","Giuseppe Rotunno","Gianni Di Venanzo","Néstor Almendros","Vittorio Storaro","Gordon Willis","Conrad Hall","Vilmos Zsigmond","Robby Müller","Michael Ballhaus","Darius Khondji","Christopher Doyle","Roger Deakins","Emmanuel Lubezki","Janusz Kamiński","Robert Richardson","Hoyte van Hoytema","Greig Fraser","Rachel Morrison","Ed Lachman","Mihai Mălaimare Jr.","Sayombhu Mukdeeprom","Ari Wegner","Linus Sandgren","Edward Lachman"]
+  },
+  "screenwriter": {
+    "occupation": ["Q28389"],
+    "names": ["Herman J. Mankiewicz","Ben Hecht","Preston Sturges","Billy Wilder","Dalton Trumbo","Ernest Lehman","Emeric Pressburger","Paddy Chayefsky","Robert Towne","William Goldman","Jean-Claude Carrière","Tonino Guerra","Cesare Zavattini","Éric Rohmer","Krzysztof Piesiewicz","Nora Ephron","Paul Schrader","Charlie Kaufman","Aaron Sorkin","Quentin Tarantino","Eric Roth","Diablo Cody","Greta Gerwig","Jordan Peele","Michael Haneke","Asghar Farhadi","Guillermo Arriaga","Phoebe Waller-Bridge","Joseph Cedar","Hanan Peled","Ruth Prawer Jhabvala","Michael Wilson"]
+  },
+  "musician": {
+    "occupation": ["Q266569","Q36834","Q130857"],
+    "names": ["Max Steiner","Erich Wolfgang Korngold","Bernard Herrmann","Miklós Rózsa","Alex North","Elmer Bernstein","Henry Mancini","Nino Rota","Ennio Morricone","Georges Delerue","Michel Legrand","Maurice Jarre","Jerry Goldsmith","John Williams","Toru Takemitsu","Ryuichi Sakamoto","Vangelis","Philip Glass","Howard Shore","Danny Elfman","Hans Zimmer","Angelo Badalamenti","Thomas Newman","Alexandre Desplat","Joe Hisaishi","Jóhann Jóhannsson","Ludwig Göransson","Hildur Guðnadóttir","Clint Mansell","Trent Reznor","Sergei Prokofiev","Dmitri Shostakovich"]
+  }
+}
